@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+</head>
+<body>
+    <header>
+        <h1>HTML Elements Practice</h1>
+    </header>
+    <h2>My Favorite Foods</h2>
+    <ol type="I" start="1">
+        <li>Pizza</li>
+        <li>Ice Cream</li>
+        <li>Chapati</li>
+        <li>Pasta</li>
+        <li>Chocolate</li>
+    </ol>
+
+
+    <h2>Beautiful Nature Image</h2>
+    <img src="https://images.pexels.com/photos/3244513/pexels-photo-3244513.jpeg" alt="Beautiful mountain landscape" width="500">
+
+
+    <h2>Contact List</h2>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>John Smith</td>
+            <td>123 Kiambu</td>
+            <td>123-4567</td>
+            <td>john@example.com</td>
+        </tr>
+        <tr>
+            <td>Sarah Johnson</td>
+            <td>234 Nairobi</td>
+            <td>234-5678</td>
+            <td>sarah@example.com</td>
+        </tr>
+        <tr>
+            <td>Michael Brown</td>
+            <td>345 Mombasa</td>
+            <td>345-6789</td>
+            <td>michael@example.com</td>
+        </tr>
+        <tr>
+            <td>Emily Davis</td>
+            <td>456 Kisumu</td>
+            <td>456-7890</td>
+            <td>emily@example.com</td>
+        </tr>
+        <tr>
+            <td>David Wilson</td>
+            <td>567 Nyeri</td>
+            <td>567-8901</td>
+            <td>david@example.com</td>
+        </tr>
+    </table>
+
+
+    <h2>Registration Form</h2>
+    <form action="#" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+        <br>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <br>
+        <div>
+            <label for="birthdate">Birth Date:</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+        </div>
+        <br>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Create a password" minlength="8" required>
+        </div>
+        <br>
+        <div>
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="">--Select a country--</option>
+                <option value="usa">Kenya</option>
+                <option value="canada">Nigeria</option>
+                <option value="uk">South Africa</option>
+                <option value="australia">Ghana</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <p>Gender:</p>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+        </div>
+        <br>
+        <div>
+            <p>Interests:</p>
+            <input type="checkbox" id="sports" name="interests" value="sports">
+            <label for="sports">Sports</label>
+            
+            <input type="checkbox" id="music" name="interests" value="music">
+            <label for="music">Music</label>
+            
+            <input type="checkbox" id="reading" name="interests" value="reading">
+            <label for="reading">Reading</label>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Register">
+        </div>
+    </form>
+
+
+    <h2>Audio Sample</h2>
+    <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+
+    <h2>Video Sample</h2>
+    <video width="320" height="240" controls>
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+
+    <footer>
+        <p>&copy; 2025 My HTML Practice Page</p>
+    </footer>
+</body>
+</html>
