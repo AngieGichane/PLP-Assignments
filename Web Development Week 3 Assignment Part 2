@@ -1,0 +1,111 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20;
+    padding: 30;
+    background-color: #aafaf3;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #00bcd4, #9c27b0);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #fff; 
+}
+
+.description {
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+#about, #projects, #skills {
+    background-color: #fafafa;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about {
+    background-color: #faa5f6;
+    font-family: 'Verdana', sans-serif;
+}
+
+#projects {
+    background-color: #faa5a5;
+    font-family: 'Georgia', serif;
+}
+
+#skills {
+    background-color: #f4faa5;
+    font-family: 'Courier New', monospace;
+}
+
+#projects ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#projects li {
+    background-color: #f2f8c9;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.skill-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.skill {
+    width: 30%;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.html {
+    background-color: #ff6f61;
+}
+
+.css {
+    background-color: #3366cc;
+}
+
+.js {
+    background-color: #f0ad4e;
+}
+
+.image {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 4px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background-color: #fff;
+}
+
+.footer {
+    background-color: #4c07fc;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto; 
+}
