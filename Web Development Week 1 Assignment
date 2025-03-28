@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <p>Your source for web development tutorials</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>About This Site</h2>
+            <p>This is a simple website created to demonstrate HTML5 structure and semantic elements. The goal is to show how proper HTML organization can improve both user experience and code readability.</p>
+        </section>
+
+        <article>
+            <h2>Why HTML5 Matters</h2>
+            <p>HTML5 introduced many semantic elements that help define the structure of a web page. These elements make your code more readable and help with accessibility and SEO.</p>
+            <p>Using elements like header, nav, main, section, article, and footer helps search engines and screen readers understand the content better.</p>
+        </article>
+    </main>
+    <footer>
+        <h3>Contact Information</h3>
+        <address>
+            Email: <a href="mailto:info@mywebsite.com">info@mywebsite.com</a><br>
+            Phone: (123) 456-7890<br>
+            Address: 123 Web Dev Street, HTML City, 12345
+        </address>
+        <p>&copy; 2025 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
