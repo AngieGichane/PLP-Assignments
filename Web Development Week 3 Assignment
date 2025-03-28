@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Colorful Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Welcome to My Colorful Webpage</h1>
+        <p class="description">Explore the beauty of colors, design, and styling with CSS!</p>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p class="text">Hi, I’m a budding web developer learning the ropes of HTML and CSS. I love experimenting with colors and design!</p>
+        </section>
+
+        <section id="projects">
+            <h2>My Web Development Projects</h2>
+            <ul>
+                <li>Project 1: Portfolio Website</li>
+                <li>Project 2: Personal Blog</li>
+                <li>Project 3: E-commerce Site</li>
+            </ul>
+        </section>
+
+        <section id="skills">
+            <h2>My Skills</h2>
+            <p class="text">I am proficient in HTML, CSS, JavaScript, and have a basic understanding of Python and Java.</p>
+            <div class="skill-bar">
+                <div class="skill html">HTML</div>
+                <div class="skill css">CSS</div>
+                <div class="skill js">JavaScript</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>My Dream Car</h2>
+            <img src="Cherry Red Porsche 911.png" alt="Cherry Red Porsche 911" class="image">
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 My Colorful Webpage | Designed by Angela Gichane</p>
+    </footer>
+
+</body>
+</html>
