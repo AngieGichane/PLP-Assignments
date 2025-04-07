@@ -21,9 +21,9 @@ Example: If a user inputs 10, 5, and +, your program should display 10 + 5 = 15.
 2. Using the calculate_discount function, prompt the user to enter the original price of an item and the discount percentage. Print the final price after applying the discount, or if no discount was applied, print the original price.
 
 # Python Week 4 Assignment
-1. ## File Read & Write Challenge 🖋️:
+1. ### File Read & Write Challenge 🖋️:
       Create a program that reads a file and writes a modified version to a new file.
-2. ## Error Handling Lab 🧪:
+2. ### Error Handling Lab 🧪:
       Ask the user for a filename and handle errors if it doesn’t exist or can’t be read.
 
 ## Web Development Week 1 Assignment
