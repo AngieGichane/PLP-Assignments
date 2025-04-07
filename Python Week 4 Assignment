@@ -1,0 +1,79 @@
+try:
+    input_filename = input("Enter the name of the file to read: ")
+    
+    try:
+        with open(input_filename, 'r') as input_file:
+            content = input_file.readlines()
+            
+            # Show file statistics
+            print(f"Successfully read file: {input_filename}")
+            print(f"Number of lines: {len(content)}")
+            
+            # Ask user for modification type
+            print("\nChoose a modification:")
+            print("1. Convert to uppercase")
+            print("2. Add line numbers")
+            print("3. Remove empty lines")
+            print("4. Replace a word or phrase")
+            
+            choice = input("Enter your choice (1-4): ")
+            
+            if choice == '1':
+                modified_content = [line.upper() for line in content]
+            elif choice == '2':
+                modified_content = [f"{i+1}. {line}" for i, line in enumerate(content)]
+            elif choice == '3':
+                modified_content = [line for line in content if line.strip()]
+            elif choice == '4':
+                search_text = input("Enter text to search for: ")
+                replace_text = input("Enter replacement text: ")
+                modified_content = [line.replace(search_text, replace_text) for line in content]
+            else:
+                print("Invalid choice. Using default (uppercase).")
+                modified_content = [line.upper() for line in content]
+
+            output_filename = input("Enter the name for the modified file: ")
+            
+            try:
+                # Write modified content to new file
+                with open(output_filename, 'w') as output_file:
+                    output_file.writelines(modified_content)
+                    print(f"Successfully wrote modified content to: {output_filename}")
+            
+            except IOError as e:
+                print(f"Error writing to file {output_filename}: {e}")
+                
+    except FileNotFoundError:
+        print(f"Error: The file '{input_filename}' was not found.")
+        retry = input("Would you like to try a different file? (y/n): ")
+        if retry.lower() == 'y':
+            advanced_file_processing()
+            
+    except PermissionError:
+        print(f"Error: You don't have permission to access '{input_filename}'.")
+        
+    except UnicodeDecodeError:
+        print(f"Error: The file '{input_filename}' contains characters that cannot be decoded.")
+        print("This might not be a text file or it uses an unsupported encoding.")
+        
+except KeyboardInterrupt:
+    print("\nOperation canceled by user.")
+    
+except Exception as e:
+    print(f"Unexpected error: {e}")
+
+# Execute one of the functions
+if __name__ == "__main__":
+print("==== File Processing Program ====")
+print("1. Basic file read and modify")
+print("2. Advanced file processing")
+
+option = input("Choose an option (1 or 2): ")
+
+if option == '1':
+    read_and_modify_file()
+elif option == '2':
+    advanced_file_processing()
+else:
+    print("Invalid option. Running basic version.")
+    read_and_modify_file()
