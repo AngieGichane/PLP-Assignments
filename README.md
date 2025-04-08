@@ -27,12 +27,13 @@ Example: If a user inputs 10, 5, and +, your program should display 10 + 5 = 15.
       Ask the user for a filename and handle errors if it doesn’t exist or can’t be read.
 
 # Python Week 5 Assignment
-1. ### Design Your Own Class! 🏗️
+### Design Your Own Class! 🏗️
 1. Create a class representing anything you like (a Smartphone, Book, or even a Superhero!).
 2. Add attributes and methods to bring the class to life!
 3. Use constructors to initialize each object with unique values.
 4. Add an inheritance layer to explore polymorphism or encapsulation.
-2. Polymorphism Challenge! 🎭
+   
+### Polymorphism Challenge! 🎭
 Create a program that includes animals or vehicles with the same action (like move()). However, make each class define move() differently (for example, Car.move() prints "Driving" 🚗, while Plane.move() prints "Flying" ✈️).
 
 ## Web Development Week 1 Assignment
