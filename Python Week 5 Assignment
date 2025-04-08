@@ -1,0 +1,57 @@
+# Question 1
+class Smartphone:
+    def __init__(self, brand, model, battery_life):
+        self.brand = brand
+        self.model = model
+        self.battery_life = battery_life  # in hours
+
+    def make_call(self, number):
+        return f"Calling {number} from {self.brand} {self.model}..."
+
+    def use_app(self, app_name, hours):
+        if hours > self.battery_life:
+            return "Battery too low to use the app!"
+        self.battery_life -= hours
+        return f"Used {app_name} for {hours} hours. Remaining battery: {self.battery_life} hours."
+
+class GamingPhone(Smartphone):
+    def __init__(self, brand, model, battery_life, cooling_system):
+        super().__init__(brand, model, battery_life)
+        self.cooling_system = cooling_system  # Yes/No
+
+    def play_game(self, game, hours):
+        if hours > self.battery_life:
+            return "Battery too low to play!"
+        self.battery_life -= hours
+        return f"Played {game} for {hours} hours. Remaining battery: {self.battery_life} hours. Cooling system: {self.cooling_system}"
+
+phone = Smartphone("Apple", "iPhone 14", 20)
+gaming_phone = GamingPhone("Asus", "ROG Phone 6", 18, "Yes")
+
+print(phone.make_call("123-456-7890"))
+print(phone.use_app("YouTube", 5))
+
+print(gaming_phone.make_call("987-654-3210"))
+print(gaming_phone.play_game("PUBG Mobile", 3))
+
+# Question 2
+class Vehicle:
+    def move(self):
+        raise NotImplementedError("Subclasses must implement this method")
+
+class Car(Vehicle):
+    def move(self):
+        return "Driving 🚗"
+
+class Plane(Vehicle):
+    def move(self):
+        return "Flying ✈️"
+
+class Boat(Vehicle):
+    def move(self):
+        return "Sailing 🛥️"
+
+vehicles = [Car(), Plane(), Boat()]
+
+for vehicle in vehicles:
+    print(vehicle.move())
