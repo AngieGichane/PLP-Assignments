@@ -174,3 +174,21 @@ Write an SQL statement to update the age of the student with ID 2 to 20 in the s
 2. Display the check number and the highest amount paid for that check number.
 3. Group the results by check number.
 
+# Database Week 5 Assignment
+## Submission Instructions
+📂 Write all your SQL queries in the answers.sql file.
+✍️ Answer each question concisely and make sure your queries are clear and correct.
+🗣️ Structure your responses clearly, and use comments if necessary to explain your approach.
+
+## 📚 Assignment Questions
+### Question 1 🗑️
+Write an SQL query to drop an index named IdxPhone from customers table.
+
+### Question 2 👤
+Write an SQL query to create a user named bob with the password 'S$cu3r3!' , restricted to the localhost hostname.
+
+### Question 3 🔑
+Write an SQL query to grant the INSERT privilege to the user bob on the salesDB database.
+
+### Question 4 🔐
+Write an SQL query to change the password for the user bob to 'P$55!23'
