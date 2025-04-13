@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">MyWebsite</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="hero">
+            <h1>Welcome to My Website</h1>
+            <p>This is a responsive layout using CSS Grid and Flexbox with media queries.</p>
+        </div>
+        
+        <main class="main-content">
+            <div class="card">
+                <h2>Main Content</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor felis vel velit tincidunt, at ultrices nibh fringilla. Vivamus vel nisi in justo luctus venenatis.</p>
+                <p>Proin ut velit vel eros hendrerit tincidunt. Sed at lacus turpis. Donec elementum neque at massa sagittis, at lobortis mi pellentesque.</p>
+            </div>
+            
+            <div class="card">
+                <h2>Our Mission</h2>
+                <p>Phasellus luctus elit nec dui tempor, ac posuere urna semper. Vivamus lacinia justo ac nulla elementum, vel dictum urna convallis. Maecenas feugiat libero in felis gravida aliquet.</p>
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <h2>Sidebar</h2>
+            <p>This is a sidebar that adjusts based on screen size.</p>
+            <ul>
+                <li>Latest News</li>
+                <li>Popular Posts</li>
+                <li>Categories</li>
+                <li>Archives</li>
+            </ul>
+        </aside>
+
+        <div class="feature-section">
+            <div class="feature">
+                <h3>Feature 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="feature">
+                <h3>Feature 2</h3>
+                <p>Proin ut velit vel eros hendrerit tincidunt.</p>
+            </div>
+            <div class="feature">
+                <h3>Feature 3</h3>
+                <p>Vivamus lacinia justo ac nulla elementum.</p>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
