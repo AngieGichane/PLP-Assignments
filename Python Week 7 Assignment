@@ -1,0 +1,157 @@
+# Import necessary libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.datasets import load_iris
+import warnings
+warnings.filterwarnings('ignore')
+
+# Set the style for our plots
+plt.style.use('seaborn-v0_8-whitegrid')
+sns.set_palette("muted")
+
+# Task 1: Load and Explore the Dataset
+
+print("Task 1: Loading and Exploring the Dataset")
+print("-----------------------------------------")
+
+# Load the Iris dataset
+try:
+    # Option 1: Load from sklearn
+    iris = load_iris()
+    iris_df = pd.DataFrame(data=iris.data, columns=iris.feature_names)
+    iris_df['species'] = pd.Categorical.from_codes(iris.target, iris.target_names)
+    
+    print("Dataset loaded successfully!\n")
+except Exception as e:
+    print(f"Error loading dataset: {e}")
+    
+# Display the first few rows of the dataset
+print("First 5 rows of the dataset:")
+print(iris_df.head())
+print("\n")
+
+# Explore the structure of the dataset
+print("Dataset information:")
+print(f"Number of rows: {iris_df.shape[0]}")
+print(f"Number of columns: {iris_df.shape[1]}")
+print("\nData types:")
+print(iris_df.dtypes)
+print("\n")
+
+# Check for missing values
+print("Missing values in each column:")
+print(iris_df.isnull().sum())
+print("\n")
+
+# If any, clean them:
+# For demonstration:
+iris_df.loc[10:15, 'sepal length (cm)'] = np.nan
+print("After artificially introducing missing values:")
+print(iris_df.isnull().sum())
+
+# Clean the dataset by filling missing values with column mean
+iris_df['sepal length (cm)'] = iris_df['sepal length (cm)'].fillna(iris_df['sepal length (cm)'].mean())
+print("\nAfter cleaning missing values:")
+print(iris_df.isnull().sum())
+print("\n")
+
+# Task 2: Basic Data Analysis
+print("Task 2: Basic Data Analysis")
+print("--------------------------")
+
+# Compute basic statistics
+print("Basic statistics for numerical columns:")
+print(iris_df.describe())
+print("\n")
+
+# Group by species and compute mean for each feature
+print("Mean values by species:")
+species_means = iris_df.groupby('species').mean()
+print(species_means)
+print("\n")
+
+# Additional analysis: Calculate the correlation between different features
+print("Correlation between features:")
+correlation = iris_df.corr()
+print(correlation)
+print("\n")
+
+# Task 3: Data Visualization
+print("Task 3: Data Visualization")
+print("-------------------------")
+
+# Create a figure with subplots for multiple visualizations
+plt.figure(figsize=(16, 12))
+
+# 1. Line chart: Trends of measurements for first 50 samples
+plt.subplot(2, 2, 1)
+for feature in iris.feature_names:
+    plt.plot(iris_df[feature][:50], label=feature)
+plt.title('Measurements Trend for First 50 Samples', fontsize=14)
+plt.xlabel('Sample Index', fontsize=12)
+plt.ylabel('Measurement (cm)', fontsize=12)
+plt.legend(fontsize=10)
+plt.grid(True)
+
+# 2. Bar chart: Average measurements by species
+plt.subplot(2, 2, 2)
+species_means.plot(kind='bar', colormap='viridis', ax=plt.gca())
+plt.title('Average Measurements by Species', fontsize=14)
+plt.xlabel('Species', fontsize=12)
+plt.ylabel('Average Measurement (cm)', fontsize=12)
+plt.xticks(rotation=45)
+plt.grid(True, axis='y')
+
+# 3. Histogram: Distribution of petal length
+plt.subplot(2, 2, 3)
+for species in iris.target_names:
+    subset = iris_df[iris_df['species'] == species]
+    plt.hist(subset['petal length (cm)'], alpha=0.7, label=species, bins=10)
+plt.title('Distribution of Petal Length by Species', fontsize=14)
+plt.xlabel('Petal Length (cm)', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+plt.legend(fontsize=10)
+plt.grid(True)
+
+# 4. Scatter plot: Relationship between sepal length and petal length
+plt.subplot(2, 2, 4)
+for species_id, species in enumerate(iris.target_names):
+    subset = iris_df[iris_df['species'] == species]
+    plt.scatter(subset['sepal length (cm)'], subset['petal length (cm)'], 
+                label=species, s=70, alpha=0.7)
+plt.title('Sepal Length vs Petal Length', fontsize=14)
+plt.xlabel('Sepal Length (cm)', fontsize=12)
+plt.ylabel('Petal Length (cm)', fontsize=12)
+plt.legend(fontsize=10)
+plt.grid(True)
+
+# Adjust layout to prevent overlap
+plt.tight_layout()
+plt.savefig('iris_visualizations.png')
+plt.show()
+
+# Additional visualization: Correlation heatmap
+plt.figure(figsize=(10, 8))
+sns.heatmap(correlation, annot=True, cmap='coolwarm', linewidths=0.5)
+plt.title('Correlation Matrix of Iris Features', fontsize=16)
+plt.tight_layout()
+plt.savefig('correlation_heatmap.png')
+plt.show()
+
+# Additional visualization: Pairplot to show relationships between all features
+sns.pairplot(iris_df, hue='species', markers=['o', 's', 'D'], height=2.5)
+plt.suptitle('Pairplot of Iris Dataset Features by Species', y=1.02, fontsize=16)
+plt.savefig('iris_pairplot.png')
+plt.show()
+
+# Findings and observations
+print("Findings and Observations:")
+print("--------------------------")
+print("1. The Iris dataset contains measurements of 150 iris flowers from three different species.")
+print("2. The 'setosa' species is clearly distinct from the other two species, particularly in petal measurements.")
+print("3. There is a strong positive correlation between petal length and petal width (r = {:.2f}).".format(correlation.loc['petal length (cm)', 'petal width (cm)']))
+print("4. 'Versicolor' and 'virginica' species have some overlap in their measurements, making them harder to distinguish.")
+print("5. The histogram shows that petal length follows a multimodal distribution, with each mode corresponding to a different species.")
+print("\nConclusion: The Iris dataset demonstrates clear morphological differences between the three iris species, particularly in their petal characteristics.")
