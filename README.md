@@ -136,6 +136,22 @@ Include at least:
 2. Make the page responsive.
 3. Test across different screen sizes.
 
+# Web Development Week 5 Assignment
+### Instructions
+1. Create a script.js file and link it to a HTML.
+2. Structure the document using DOCTYPE, html, head, and body.
+
+### Note
+Write JavaScript that:
+      1. Changes text content dynamically.
+      2. Modifies CSS styles via JavaScript.
+      3. Adds or removes an element when a button is clicked.
+
+### Tasks
+1. Create a well-structured HTML5 document.
+2. Use at least 5 different HTML elements.
+3. Ensure semantic correctness.
+
 # Database Week 1 Asignment
 ## 📚 Assignment Questions
 1. Write an SQL query to create a new database called salesDB.
