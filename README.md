@@ -36,6 +36,38 @@ Example: If a user inputs 10, 5, and +, your program should display 10 + 5 = 15.
 ### Polymorphism Challenge! 🎭
 Create a program that includes animals or vehicles with the same action (like move()). However, make each class define move() differently (for example, Car.move() prints "Driving" 🚗, while Plane.move() prints "Flying" ✈️).
 
+# Python Week 7 Assignment
+## Objective For this Assignment:
+1. To load and analyze a dataset using the pandas library in Python.
+2. To create simple plots and charts with the matplotlib library for visualizing the data.
+
+## Submission Requirements
+1. Submit a Jupyter notebook (.ipynb file) or Python script (.py file) containing:
+2. Data loading and exploration steps.
+3. Basic data analysis results.
+4. Visualizations.
+5. Any findings or observations.
+
+### Task 1: Load and Explore the Dataset
+1. Choose a dataset in CSV format (for example, you can use datasets like the Iris dataset, a sales dataset, or any dataset of your choice).
+2. Load the dataset using pandas.
+3. Display the first few rows of the dataset using .head() to inspect the data.
+4. Explore the structure of the dataset by checking the data types and any missing values.
+5. Clean the dataset by either filling or dropping any missing values.
+
+### Task 2: Basic Data Analysis
+1. Compute the basic statistics of the numerical columns (e.g., mean, median, standard deviation) using .describe().
+2. Perform groupings on a categorical column (for example, species, region, or department) and compute the mean of a numerical column for each group.
+3. Identify any patterns or interesting findings from your analysis.
+
+### Task 3: Data Visualization
+1. Create at least four different types of visualizations:
+      Line chart showing trends over time (for example, a time-series of sales data).
+      Bar chart showing the comparison of a numerical value across categories (e.g., average petal length per species).
+      Histogram of a numerical column to understand its distribution.
+      Scatter plot to visualize the relationship between two numerical columns (e.g., sepal length vs. petal length).
+2. Customize your plots with titles, labels for axes, and legends where necessary.
+
 ## Web Development Week 1 Assignment
 1. Create an index.html file.
 2. Structure the document using DOCTYPE, html, head, and body.
@@ -105,21 +137,11 @@ Include at least:
 3. Test across different screen sizes.
 
 # Database Week 1 Asignment
-## Submission Instructions
-📂 Write all your SQL queries in answers.sql file.
-✍️ Answer each question concisely and make sure your queries are clear and correct.
-🗣️ Structure your responses clearly, and use comments if necessary to explain your approach.
-
 ## 📚 Assignment Questions
 1. Write an SQL query to create a new database called salesDB.
 2. Write an SQL query to drop (delete) the database called demo.
 
 # Database Week 2 Assignment
-## Submission Instructions
-📂 Write all your SQL queries in answers.sql file.
-✍️ Answer each question concisely and make sure your queries are clear and correct.
-🗣️ Structure your responses clearly, and use comments if necessary to explain your approach.
-
 ## 📚 Assignment Questions
 1. Write an SQL query to retrieve the checkNumber, paymentDate, and amount from the payments table.
 2. Write an SQL query to retrieve the orderDate, requiredDate, and status of orders that are currently 'In Process' from the orders table. Sort the results in descending order of orderDate
@@ -128,11 +150,6 @@ Include at least:
 5. Write a query to fetch the productName and quantityInStock from the products table. Sort the results in ascending order of buyPrice and limit the output to 5 records.
 
 # Database Week 3 Assignment
-## Submission Instructions
-📂 Write all your SQL queries in the answers.sql file.
-✍️ Answer each question concisely and ensure your queries are clear and correct.
-🗣️ Structure your responses clearly, and use comments if necessary to explain your approach.
-
 ## 📚 Assignment Questions
 ### Question 1 🧑‍🎓
 Write an SQL statement to create a table named student with the following columns:
@@ -147,11 +164,6 @@ Write an SQL statement to insert at least 3 records into the student table.
 Write an SQL statement to update the age of the student with ID 2 to 20 in the student table.
 
 # Database Week 4 Assignment
-## Submission Instructions
-📂 Write all your SQL queries in the answers.sql file.
-✍️ Answer each question concisely and make sure your queries are clear and correct.
-🗣️ Structure your responses clearly, and use comments if necessary to explain your approach.
-
 ## 📚 Assignment Questions
 ### Question 1
 1. Write an SQL query to show the total payment amount for each payment date from payments table.
@@ -175,11 +187,6 @@ Write an SQL statement to update the age of the student with ID 2 to 20 in the s
 3. Group the results by check number.
 
 # Database Week 5 Assignment
-## Submission Instructions
-📂 Write all your SQL queries in the answers.sql file.
-✍️ Answer each question concisely and make sure your queries are clear and correct.
-🗣️ Structure your responses clearly, and use comments if necessary to explain your approach.
-
 ## 📚 Assignment Questions
 ### Question 1 🗑️
 Write an SQL query to drop an index named IdxPhone from customers table.
@@ -192,3 +199,49 @@ Write an SQL query to grant the INSERT privilege to the user bob on the salesDB 
 
 ### Question 4 🔐
 Write an SQL query to change the password for the user bob to 'P$55!23'
+
+# Database Week 6 Assignment
+## 📚 Assignment Questions
+### **Question 1 🧑‍💼**  
+**Write an SQL query** to get the **firstName**, **lastName**, **email**, and **officeCode** of all employees.  
+Use an **INNER JOIN** to combine the **employees** table with the **offices** table using the **officeCode** column.
+
+### **Question 2 🛍️**  
+**Write an SQL query** to get the **productName**, **productVendor**, and **productLine** from the **products** table.  
+Use a **LEFT JOIN** to combine the **products** table with the **productlines** table using the **productLine** column.
+
+### **Question 3 📦**  
+**Write an SQL query** to retrieve the **orderDate**, **shippedDate**, **status**, and **customerNumber** for the first 10 orders.  
+Use a **RIGHT JOIN** to combine the **customers** table with the **orders** table using the **customerNumber** column.
+
+# Database Week 7 Assignment 
+## 📚 Assignment Questions
+### Question 1 Achieving 1NF (First Normal Form) 🛠️
+Task:
+- You are given the following table **ProductDetail**:
+
+| OrderID | CustomerName  | Products                        |
+|---------|---------------|---------------------------------|
+| 101     | John Doe      | Laptop, Mouse                   |
+| 102     | Jane Smith    | Tablet, Keyboard, Mouse         |
+| 103     | Emily Clark   | Phone                           |
+
+
+- In the table above, the **Products column** contains multiple values, which violates **1NF**.
+- **Write an SQL query** to transform this table into **1NF**, ensuring that each row represents a single product for an order
+
+### Question 2 Achieving 2NF (Second Normal Form) 🧩
+- You are given the following table **OrderDetails**, which is already in **1NF** but still contains partial dependencies:
+
+| OrderID | CustomerName  | Product      | Quantity |
+|---------|---------------|--------------|----------|
+| 101     | John Doe      | Laptop       | 2        |
+| 101     | John Doe      | Mouse        | 1        |
+| 102     | Jane Smith    | Tablet       | 3        |
+| 102     | Jane Smith    | Keyboard     | 1        |
+| 102     | Jane Smith    | Mouse        | 2        |
+| 103     | Emily Clark   | Phone        | 1        |
+
+- In the table above, the **CustomerName** column depends on **OrderID** (a partial dependency), which violates **2NF**. 
+
+- Write an SQL query to transform this table into **2NF** by removing partial dependencies. Ensure that each non-key column fully depends on the entire primary key.
